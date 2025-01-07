@@ -1,6 +1,7 @@
 using System.Diagnostics.Eventing.Reader;
 using System.Net;
 using System.Net.Sockets;
+using System.Text;
 
 namespace ChatClient
 {
@@ -37,7 +38,7 @@ namespace ChatClient
                     Thread chatThread = new Thread(new ThreadStart(chatHandler.ChatProcess));
                     chatThread.Start();
 
-                    //Message_Send("<" + txtName.Text + "> 님께서 접속 하였습니다", true);
+                    Message_Send("<" + txtName.Text + "> 님께서 접속 하였습니다", true);
                     btnConnect.Text = "나가기";
                 }
                 catch (System.Exception Ex)
@@ -47,7 +48,33 @@ namespace ChatClient
             }
             else
             {
+                Message_Send("<" + txtName.Text + "> 님께서 접속해제 하셨습니다", true);
+                btnConnect.Text = "입장";
+                chatHandler.ChatCloese();
+                ntwStream.Close();
+                tcpClient.Close();
+            }
+        }
 
+        private void Message_Send(string IstMessage, Boolean Msg)
+        {
+            try
+            {
+                // 보낼 데이터를 읽어 Default 형식의 바이트 스트림으로 변환 해서 전송
+                string dataToSend = IstMessage + "\r\n";
+                byte[] data = Encoding.Default.GetBytes(dataToSend);
+                ntwStream.Write(data, 0, data.Length);
+            }
+            catch (Exception Ex)
+            {
+                if (Msg == true)
+                {
+                    MessageBox.Show("서버가 Start 되지 않았거나 \\r\\n" + Ex.Message, "Client");
+                    btnConnect.Text = "입장";
+                    chatHandler.ChatCloese();
+                    ntwStream.Close();
+                    tcpClient.Close();
+                }
             }
         }
 
@@ -62,6 +89,21 @@ namespace ChatClient
             else
             {
                 this.txtChatMsg.AppendText(text);
+            }
+        }
+
+        private void txtMsg_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if(e.KeyChar == 13)
+            {
+                // 서버에 접속이 된 경우에만 메시지를 서버로 보냄
+                if(btnConnect.Text == "나가기")
+                {
+                    Message_Send("<" + txtName.Text + ">" + txtMsg.Text, true);
+                }
+
+                txtMsg.Text = "";
+                e.Handled = true; // 이벤트 처리중지
             }
         }
     }

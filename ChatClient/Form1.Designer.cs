@@ -76,6 +76,7 @@
             txtMsg.Name = "txtMsg";
             txtMsg.Size = new Size(342, 23);
             txtMsg.TabIndex = 4;
+            txtMsg.KeyPress += txtMsg_KeyPress;
             // 
             // Form1
             // 

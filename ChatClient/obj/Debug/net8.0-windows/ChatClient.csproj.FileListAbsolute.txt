@@ -1,0 +1,17 @@
+C:\Users\minsu\Desktop\ChatClient\ChatClient\bin\Debug\net8.0-windows\ChatClient.exe
+C:\Users\minsu\Desktop\ChatClient\ChatClient\bin\Debug\net8.0-windows\ChatClient.deps.json
+C:\Users\minsu\Desktop\ChatClient\ChatClient\bin\Debug\net8.0-windows\ChatClient.runtimeconfig.json
+C:\Users\minsu\Desktop\ChatClient\ChatClient\bin\Debug\net8.0-windows\ChatClient.dll
+C:\Users\minsu\Desktop\ChatClient\ChatClient\bin\Debug\net8.0-windows\ChatClient.pdb
+C:\Users\minsu\Desktop\ChatClient\ChatClient\obj\Debug\net8.0-windows\ChatClient.Form1.resources
+C:\Users\minsu\Desktop\ChatClient\ChatClient\obj\Debug\net8.0-windows\ChatClient.csproj.GenerateResource.cache
+C:\Users\minsu\Desktop\ChatClient\ChatClient\obj\Debug\net8.0-windows\ChatClient.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\minsu\Desktop\ChatClient\ChatClient\obj\Debug\net8.0-windows\ChatClient.AssemblyInfoInputs.cache
+C:\Users\minsu\Desktop\ChatClient\ChatClient\obj\Debug\net8.0-windows\ChatClient.AssemblyInfo.cs
+C:\Users\minsu\Desktop\ChatClient\ChatClient\obj\Debug\net8.0-windows\ChatClient.csproj.CoreCompileInputs.cache
+C:\Users\minsu\Desktop\ChatClient\ChatClient\obj\Debug\net8.0-windows\ChatClient.sourcelink.json
+C:\Users\minsu\Desktop\ChatClient\ChatClient\obj\Debug\net8.0-windows\ChatClient.dll
+C:\Users\minsu\Desktop\ChatClient\ChatClient\obj\Debug\net8.0-windows\refint\ChatClient.dll
+C:\Users\minsu\Desktop\ChatClient\ChatClient\obj\Debug\net8.0-windows\ChatClient.pdb
+C:\Users\minsu\Desktop\ChatClient\ChatClient\obj\Debug\net8.0-windows\ChatClient.genruntimeconfig.cache
+C:\Users\minsu\Desktop\ChatClient\ChatClient\obj\Debug\net8.0-windows\ref\ChatClient.dll
